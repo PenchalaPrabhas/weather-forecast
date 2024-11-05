@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="loader"></div>
+            <input type="text" placeholder="Search City" id="city">
+            <button  onclick="getWeather()"><i class="fa-solid fa-magnifying-glass">Search</i></button>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="header-right">
+            <h1>Weather Forecast</h1>
+        </div>
+    </header>
+
+        <div class="container">
+            <div class="left-section">
+                <h3 id="ttime"></h3>
+                <h2 id="temperature"></h2>
+                <img id="weatherIcon">
+                <p id="city1"></p> <p id="mode1"></p>
+                
+                <p id="mode"></p>
+               
+                
+                <p> <span id="humidity"></span></p>
+                <p id ="coordinates"></p>
+                
+            </div>
+            <div class="right-section">
+                <div class="top-right">
+                    <h2>Daily Forecast</h2>
+                    <div id="days">      <h2 id="d1">      </h2>  <img id="im1">       <h2 id="dt1"></h2>   <h2 id="de1"></h2></div>
+                   
+                    <div id="days">      <h2 id="d2">     </h2>   <img id="im2">       <h2 id="dt2"></h2>   <h2 id="de2"></h2></div>
+                    <div id="days">      <h2 id="d3">     </h2>   <img id="im3">        <h2 id="dt3"></h2>   <h2 id="de3"></h2></div>
+                    <div id="days">      <h2 id="d4">     </h2>   <img id="im4">       <h2 id="dt4"></h2>  <h2 id="de4"></h2></div>
+                    <div id="days">      <h2 id="d5">     </h2>   <img id="im5">       <h2 id="dt5"></h2>  <h2 id="de5"></h2></div>
+                </div>
+                <div class="bottom-right">
+                    <h2>Hourly Forecast</h2>
+                    <div id="hours"><h2 id="t1">        </h2>      <img id="i1">          <h2 id="dtt1"></h2>   <h2 id="dte1"></h2></div>
+                    <div id="hours"><h2 id="t2">     </h2>         <img id="i2">          <h2 id="dtt2"></h2>   <h2 id="dte2"></h2></div>
+                    <div id="hours"><h2 id="t3">     </h2>         <img id="i3">          <h2 id="dtt3"></h2>   <h2 id="dte3"></h2></div>
+              
+                    <div id="hours"><h2 id="t4">     </h2>         <img id="i4">          <h2 id="dtt4"></h2>   <h2 id="dte4"></h2> </div>
+                    <div id="hours"><h2 id="t5">     </h2>         <img id="i5">          <h2 id="dtt5"></h2>   <h2 id="dte5"></h2></div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="down">
+        <div id="disp"><h2>population</h2>      <h1 id="population"></h1> </div>
+        <div id="disp"> <h2>sunrise</h2>        <h1 id="sunrise"></h1></div>
+
+        <div id="disp"><h2>sunset:</h2>        <h1 id="sunset"></h1> </div>
+        <div id="disp"><h2> wind speed:</h2>    <h1 id="windspeed"></h1></div>
+       
+        <div id="disp"><h2>wind degree</h2>      <h1 id="winddeg"> </h1></div>
+
+        <div id="disp"> <h2>pressure</h2>       <h1 id="pressure"></h1></div>
+        <div id="disp"><h2> visibility</h2>      <h1 id="visibility"></h1></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+/* Ensure the parent container (body) and direct children are spaced */
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between the body children */
+    margin: 0; /* Remove any default margin */
+   /* Ensure full height for layout */
+    background-color: #1f2227;
+    flex-wrap: wrap;
+    width:fit-content;
+    height:fit;
+   
+}
+.left-section h2 {
+    font-size: 40px; /* Larger font size for temperature */
+    margin-bottom: 10px; /* Space below the heading */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.left-section p {
+    font-size: 20px; /* Slightly larger font size for paragraphs */
+    margin: 5px 0; /* Vertical margin for paragraphs */
+    transition: color 0.3s; /* Smooth transition for color change */
+    color: #fff; /* Ensure paragraph text is white */
+}
+
+/* Hover effects for text */
+.left-section h2:hover,
+.left-section p:hover {
+    color: #000000; /* Bright color on hover */
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.6); /* Subtle glow effect */
+}
+/* Container setup */
+.container {
+    display: flex;
+    flex-grow: 1;
+    gap: 3px; /* Increased space between sections for a more open layout */
+    padding: 0px; /* More padding for visual spacing */
+    background-color: #1f1f1f; /* Dark background for a modern look */
+    border-radius: 12px; /* Rounded corners for a smoother appearance */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    color: #ffffff; /* White text for contrast */
+    flex-wrap: wrap;
+}
+
+/* Style for individual child elements within the container */
+.container > div {
+    background-color: #2a2a2a; /* Darker background for child elements */
+    border-radius: 8px; /* Rounded corners */
+    padding: 5px; /* Inner padding */
+    flex: 1; /* Ensures child elements share space equally */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4); /* Soft shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for child elements */
+.container > div:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6); /* Deeper shadow */
+    background-color: #333; /* Slightly lighter background on hover */
+}
+
+
+/* Left section */
+.left-section {
+    width: 250px;
+
+        background-color: #ffeb3b; /* Softer yellow for the initial look */
+    text-align: center;
+    padding: 5px; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4); /* White shadow for a unique look */
+    color: #fff;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for a colorful background and vibrant shadow */
+.left-section:hover {
+    transform: translateY(-5px); /* Lift effect */
+    background: linear-gradient(135deg, #fdd835, #ff5722, #f44336); /* Colorful gradient */
+    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.6); /* Brighter white shadow on hover */
+    
+}
+
+#temperature {
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: 60px; /* Added unit to the font-size */
+    margin:0px
+}
+
+h3{
+    margin: 0pxs;
+}
+/* Right section */
+.right-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Increased gap for better visual separation */
+    padding: 5px; /* Added padding for inner spacing */
+    background-color: #1f1f1f; /* Dark background for a modern look */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Styling for top and bottom sections */
+.top-right, .bottom-right {
+    flex-grow: 2;
+    padding: 5px; /* Improved padding for uniform spacing */
+    display: flex;
+    height:min-content;
+    flex-direction: row;
+    gap: 10px; /* Space between child elements */
+    text-align: center;
+    align-items: center; /* Center vertically */
+    border-radius: 10px; /* Rounded corners for child sections */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15); /* Light shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+/* Specific styling for the top-right section */
+.top-right {
+    background-color: #333; /* Dark base color */
+    color: #fff; /* White text for contrast */
+    border-radius: 12px; /* Rounded corners for a polished look */
+    padding: 15px; /* Inner padding */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* Specific styling for the bottom-right section */
+.bottom-right {
+    background-color: #333; /* Dark base color */
+    color: #fff; /* White text for contrast */
+    border-radius: 12px; /* Rounded corners for a polished look */
+    padding: 15px; /* Inner padding */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect for both top-right and bottom-right sections */
+.top-right:hover {
+    background: linear-gradient(135deg, #ff4b5c, #f36d21); /* Vibrant gradient on hover */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.bottom-right:hover {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Cool gradient on hover */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+
+#days, #hours {
+    width: 160px;
+    height: 130px;
+    background-color: #333; /* Dark base color */
+    border-radius: 12px;
+    border: 2px solid #5b5353; /* Slightly lighter border for subtle contrast */
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    text-align: center;
+    padding: 10px;
+    color: #f1f1f1; /* Light text color */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+/* Styling for the heading in #days and #hours */
+#days h2, #hours h2 {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Hover effect to show gradient */
+#days:hover, #hours:hover {
+    background: linear-gradient(135deg, #f9ff3e, #fad0c4); /* Gradient on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    color:black;
+}
+
+/* Styling for .bottom-right */
+.bottom-right {
+    background-color: #333; /* Dark base color */
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    color: #f1f1f1; /* Light text color */
+    text-align: center;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for .bottom-right to show gradient */
+.bottom-right:hover {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Gradient on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+
+
+
+/* Default styles without hover effect */
+
+
+/* Active styles, added only when JavaScript adds the class */
+#weatherIcon.active-icon {
+    background-color: rgba(119, 100, 100, 0.214); /* Initial background color */
+    padding: 10px;
+    border-radius: 8px; /* Optional: Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background */
+    width: 100px;
+    height: 100px;
+}
+
+/* Hover effect only when .active-icon is present */
+#weatherIcon.active-icon:hover {
+    background-color: rgb(255, 255, 255); /* Change background to gray on hover */
+}
+
+
+
+
+
+
+
+
+#d1,#d2,#d3,#d4,#d5 ,#t1   ,#t2     ,#t3   ,#t4    ,#t5            {
+    margin-bottom: 5px; /* Slight margin for spacing */
+    color: #b3b3b3; /* Subtle gray color */
+
+}
+
+
+
+
+#disp {
+    width: 180px;
+    height: 130px;
+    background-color: #2c2f33; /* Dark background */
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    border: 2px solid #4b4e52; /* Darker border to blend with background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
+    color: #ffffff; /* White text for contrast */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    padding: 10px; /* Spacing for content */
+    text-align: center;
+}
+
+#disp h2 {
+    margin-bottom: 5px; /* Slight margin for spacing */
+    color: #b3b3b3; /* Subtle gray color */
+}
+
+#disp:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7); /* Deeper shadow on hover */
+    background-color: #1f2227; /* Slightly darker background on hover */
+}
+
+
+
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #222; /* Dark background by default */
+    border: 2px solid #444; /* Subtle border for the dark theme */
+    border-radius: 12px; /* Rounded corners for a smoother look */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: background 0.5s ease-in-out, border 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+header:hover {
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    background-size: 200% 200%; /* For smooth gradient animation */
+    animation: rotateBackground 5s linear infinite; /* Optional animation */
+    border-color: #ff4b5c; /* Change border color on hover */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left input {
+    padding: 10px;
+    padding-left: 35px;
+    border: 1px solid #666; /* Darker border */
+    border-right: none;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    transition: border 0.3s, background 0.3s;
+}
+
+.header-left input:hover {
+    background-color: #444; /* Slightly lighter background on hover */
+}
+
+.header-left button {
+    padding: 10px;
+    background-color: #555; /* Dark button color */
+    border: none;
+    border-left: 1px solid #666;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.header-left button:hover {
+    background-color: #777; /* Lighter shade on hover */
+}
+
+.header-left a {
+    text-decoration: none;
+    color: #f3f5f7;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s; 
+    font-size: 20px;
+}
+
+.header-left a:hover {
+    color: #000000; /* Bright color on hover */
+    text-shadow: 0px 0px 5px rgba(255, 75, 92, 0.5); /* Subtle glow */
+    font-weight: 900;
+    font-size: 21px;
+}
+
+.header-right {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* White text for contrast */
+    transition: color 0.3s;
+}
+
+.header-right:hover {
+    color: #ff4b5c; /* Bright text on hover */
+    text-shadow: 0px 0px 5px rgba(255, 75, 92, 0.5); /* Glow effect */
+}
+
+
+
+.down {
+    height: 150px;; /* Maintain height relative to parent */
+    background-color: #333; /* Dark base color */
+    flex-grow: 0;
+    flex-wrap: nowrap;
+    padding: 20px; /* Increased padding for better spacing */
+    display: flex;
+    flex-direction: row;
+     /* Space between items evenly */
+    align-items: center; /* Center content vertically */
+    gap: 30px; /* Space between child elements */
+    text-align: center;
+    border-radius: 12px; /* Rounded corners for a smoother look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: background 0.3s; /* Smooth transition for background change */
+}
+
+/* Add styles for the text inside .down */
+.down h2 {
+    color: #fff; /* White text for contrast */
+    font-size: 18px; /* Font size for better readability */
+    margin: 0; /* Remove default margin */
+}
+
+/* Add styles for buttons or other elements within .down */
+.down button {
+    background-color: #ffffff; /* Button background */
+    color: #333; /* Button text color */
+    border: none;
+    border-radius: 8px; /* Rounded corners for buttons */
+    padding: 10px 15px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor for buttons */
+    transition: background 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for buttons */
+.down button:hover {
+    background-color: #f1f1f1; /* Light background on hover */
+}
+
+/* Hover effect for the .down section */
+.down:hover {
+    background: linear-gradient(135deg, #ff4b5c, #f36d21); /* Colorful gradient on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+.loader {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50% 50% 0 50%;
+    background: #0000;
+    background-image: radial-gradient(circle 8.4px at 50% 50%, #0000 94%, #ff0606);
+}
+
+.loader:after {
+    animation: pulse-ytk0dhmd 1s infinite;
+    transform: perspective(252px) translateZ(0px);
+}
+
+@keyframes pulse-ytk0dhmd {
+    to {
+        transform: perspective(226px) translateZ(120px);
+        opacity: 0;
+    }
+}
+  

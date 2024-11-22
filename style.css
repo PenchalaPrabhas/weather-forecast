@@ -1,16 +1,19 @@
-/* Ensure the parent container (body) and direct children are spaced */
+
 body {
     display: flex;
-    flex-direction: column;
-    gap: 10px; /* Space between the body children */
-    margin: 0; /* Remove any default margin */
-   /* Ensure full height for layout */
+    flex-direction: column; 
+    gap: 10px; 
+    margin: 0;
+    padding: 10px; 
     background-color: #1f2227;
-    flex-wrap: wrap;
-    width:fit-content;
-    height:fit;
-   
+    flex-wrap: nowrap; 
+    width: 100%; 
+    height: 100%; 
+    max-width: 100vw; 
+    max-height: 100vh; 
+    box-sizing: border-box; 
 }
+
 .left-section h2 {
     font-size: 40px; /* Larger font size for temperature */
     margin-bottom: 10px; /* Space below the heading */
